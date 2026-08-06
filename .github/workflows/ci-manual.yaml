@@ -49,7 +49,7 @@ permissions:
 
 jobs:
   setup:
-    runs-on: ubuntu-latest
+    runs-on: uipath-ubuntu-latest
     outputs:
       git_sha_short: ${{ steps.variables.outputs.git_sha_short }}
       workflow_run_url: ${{ steps.variables.outputs.workflow_run_url }}
@@ -60,11 +60,11 @@ jobs:
         echo "workflow_run_url=https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> $GITHUB_OUTPUT
 
   notify-start:
-    runs-on: ubuntu-latest
+    runs-on: uipath-ubuntu-latest
     needs:
       - setup
     steps:
-      - uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # 8.0.0
+      - uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd  # 8.0.0
         with:
           script: |
             github.rest.issues.createComment({
@@ -91,12 +91,12 @@ jobs:
 
   notify-outcome:
     if: ${{ always() }}
-    runs-on: ubuntu-latest
+    runs-on: uipath-ubuntu-latest
     needs:
       - setup
       - ci
     steps:
-      - uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # 8.0.0
+      - uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd  # 8.0.0
         with:
           script: |
             const { data } = await github.rest.actions.listJobsForWorkflowRun({

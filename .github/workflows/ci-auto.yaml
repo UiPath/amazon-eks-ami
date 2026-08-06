@@ -10,13 +10,13 @@ permissions:
 
 jobs:
   lint-docs:
-    runs-on: ubuntu-latest
+    runs-on: uipath-ubuntu-latest
     steps:
-    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # 6.0.2
+    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # 6.0.2
     - run: make lint-docs
   lint-code:
-    runs-on: ubuntu-latest
+    runs-on: uipath-ubuntu-latest
     steps:
-    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # 6.0.2
+    - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd  # 6.0.2
     - run: echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
     - run: make lint-code
