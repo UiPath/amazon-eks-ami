@@ -16,7 +16,7 @@ require (
 	github.com/pelletier/go-toml/v2 v2.3.0
 	github.com/stretchr/testify v1.11.1
 	go.uber.org/zap v1.27.1
-	golang.org/x/mod v0.34.0
+	golang.org/x/mod v0.35.0
 	k8s.io/api v0.35.3
 	k8s.io/apimachinery v0.35.3
 	k8s.io/kubelet v0.35.3
@@ -63,9 +63,9 @@ require (
 	go.uber.org/multierr v1.11.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.3 // indirect
 	golang.org/x/exp v0.0.0-20240823005443-9b4947da3948 // indirect
-	golang.org/x/net v0.47.0 // indirect
-	golang.org/x/sys v0.38.0 // indirect
-	golang.org/x/text v0.31.0 // indirect
+	golang.org/x/net v0.55.0 // indirect
+	golang.org/x/sys v0.45.0 // indirect
+	golang.org/x/text v0.37.0 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20250303144028-a0af3efb3deb // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250528174236-200df99c418a // indirect
 	google.golang.org/protobuf v1.36.10 // indirect
